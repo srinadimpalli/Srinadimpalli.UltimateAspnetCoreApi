@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31717.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Srinadimpalli.UltimateAspnetCoreApi", "Srinadimpalli.UltimateAspnetCoreApi\Srinadimpalli.UltimateAspnetCoreApi.csproj", "{F686CAD4-638F-4DFD-AE1C-2B861266AEDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F686CAD4-638F-4DFD-AE1C-2B861266AEDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F686CAD4-638F-4DFD-AE1C-2B861266AEDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F686CAD4-638F-4DFD-AE1C-2B861266AEDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F686CAD4-638F-4DFD-AE1C-2B861266AEDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2225C7D8-030F-4D21-85B6-CA5824A7424C}
+	EndGlobalSection
+EndGlobal
