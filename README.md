@@ -20,7 +20,7 @@ public static void ConfigureCors(this IServiceCollection services) =>
 
 Configure Logging using NLog:
 
-```cs
+```
 public static void ConfigureLoggerService(this IServiceCollection services) =>
             services.AddScoped<ILoggerManager, LoggerManager>();
 
