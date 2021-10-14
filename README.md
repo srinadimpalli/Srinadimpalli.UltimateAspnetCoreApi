@@ -35,8 +35,9 @@ public class LoggerManager : ILoggerManager
         public void LogWarn(string message)  {logger.Warn(message);}
     }
 ```
-```cs
 Database and Repository pattern
+```cs
+
 public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
         private RepositoryContext RepositoryContext;
@@ -99,8 +100,9 @@ public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
         
     }
 ```
-```cs
 Global Exception Handling:
+```cs
+
   Extracting all the exception handling logic into a single centralized place, we can make sure or actions cleaner, more readable and the error processing more maintainable.
    app.ConfigureExceptionHandler(logger);
   [HttpGet]
