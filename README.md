@@ -20,7 +20,7 @@ public static void ConfigureCors(this IServiceCollection services) =>
 
 Configure Logging using NLog:
 
-```
+```cs
 public static void ConfigureLoggerService(this IServiceCollection services) =>
             services.AddScoped<ILoggerManager, LoggerManager>();
 
@@ -34,7 +34,8 @@ public class LoggerManager : ILoggerManager
         public void LogWarn(string message)  {logger.Warn(message);}
     }
 ```
-```Database and Repository pattern
+```cs
+Database and Repository pattern
 public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
         private RepositoryContext RepositoryContext;
