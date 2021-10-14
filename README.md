@@ -7,8 +7,9 @@
 The purpose of this Complete ASP.NET Core Web API solution to use .NET Core and Web API features to develop loosely coupled and maintable and modular API endpoints.
 # Usage
 
-```cs
 Configuration using C# Extension methods (ServiceExtensions.cs)
+```cs
+
 public static void ConfigureCors(this IServiceCollection services) =>
             services.AddCors(options =>
             {
