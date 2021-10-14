@@ -4,7 +4,7 @@
 
 
 # Purpose
-The purpose of this Complete ASP.NET Core Web API solution to use best features in .NET Core and Web API features to develop loosely coupled and maintable and modular API endpoints.
+The purpose of this Complete ASP.NET Core Web API solution to use .NET Core and Web API features to develop loosely coupled and maintable and modular API endpoints.
 # Usage
 
 ```cs
