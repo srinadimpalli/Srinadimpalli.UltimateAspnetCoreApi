@@ -85,7 +85,6 @@ public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
                 return _companyRepository;
             }
         }
-
         public IEmployeeRepository Employee
         {
             get
@@ -95,10 +94,21 @@ public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
                 return _employeeRepository;
             }
         }
-
         public void Save() =>
             _repositoryContext.SaveChanges();
         
     }
 ```
-
+```cs
+Global Exception Handling:
+  Extracting all the exception handling logic into a single centralized place, we can make sure or actions cleaner, more readable and the error processing more maintainable.
+   app.ConfigureExceptionHandler(logger);
+  [HttpGet]
+        public IActionResult GetCompanies()
+        {
+            var companies = _repository.Company.GetAllCompanies(trackChanges: false);
+            var companiesDto = _mapper.Map<IEnumerable<CompanyDto>>(companies);
+            return Ok(companiesDto);
+            
+        }
+```
