@@ -7,6 +7,26 @@
 The purpose of this Complete ASP.NET Core Web API solution to use .NET Core and Web API features to develop loosely coupled and maintable and modular API endpoints.
 # Usage
 
+
+This solution covres the following  features:
+* Configuration and Logging service
+* EF Core Database, migrations, Repository pattern
+* Handling and Creating HTTP GET,POST,PUT,DELETE,PATCH
+* Content Negotion, Implementing Custom Formatter (CSV)
+#
+(under construction)
+#
+* Validation 
+* How to add Async code to Controllers
+* Action Filters
+* Paging,Sorting, Searching, Data Shaping
+* Supporting HATEOAS
+* Caching, Vesioning APIs
+* Rate Limit and Throttling
+* JWT and Identity
+* Documenting API with Swagger
+* Deployment to IIS, Cloud
+* 
 Configuration using C# Extension methods (ServiceExtensions.cs)
 ```cs
 
