@@ -12,7 +12,7 @@ This solution covres the following  features:
 * Configuration and Logging service
 * EF Core Database, migrations, Repository pattern
 * Handling and Creating HTTP GET,POST,PUT,DELETE,PATCH
-* Content Negotion, Implementing Custom Formatter (CSV)
+* Content Negotiation, Implementing Custom Formatter (CSV)
 #
 (under construction)
 #
