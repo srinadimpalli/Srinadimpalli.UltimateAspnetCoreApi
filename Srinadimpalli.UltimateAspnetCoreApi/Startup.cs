@@ -1,3 +1,4 @@
+using Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -39,7 +40,12 @@ namespace Srinadimpalli.UltimateAspnetCoreApi
             services.ConfigureSqlContext(Configuration);
             services.ConfigureRepositoryManager();
             services.AddAutoMapper(typeof(Startup));
-            services.AddControllers();
+            services.AddControllers(config =>
+            {
+                config.RespectBrowserAcceptHeader = true;
+                config.ReturnHttpNotAcceptable = true;
+            }).AddXmlDataContractSerializerFormatters()
+              .AddCustomCSVFormatter(); // adding custom CSV formatter
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Srinadimpalli.UltimateAspnetCoreApi", Version = "v1" });
@@ -47,7 +53,8 @@ namespace Srinadimpalli.UltimateAspnetCoreApi
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
+                                 ILoggerManager logger)
         {
             if (env.IsDevelopment())
             {
@@ -55,7 +62,7 @@ namespace Srinadimpalli.UltimateAspnetCoreApi
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Srinadimpalli.UltimateAspnetCoreApi v1"));
             }
-
+            app.ConfigureExceptionHandler(logger);
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseHsts();
